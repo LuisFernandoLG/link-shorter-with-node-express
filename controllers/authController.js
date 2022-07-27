@@ -43,7 +43,7 @@ const registerUser = async (req, res) => {
       to: user.email, // list of receivers
       subject: "Hello ✔", // Subject line
       text: "Verifica tu cuenta de correo", // plain text body
-      html: `<a href="${ process.env.HEROKUPATH0 || "https://localhost:5000"}/auth/confirmCount/${user.tokenConfirm}">Verificar</a>`, // html body
+      html: `<a href="${ process.env.HEROKUPATH0 || "https://localhost:5000"}auth/confirmCount/${user.tokenConfirm}">Verificar</a>`, // html body
     });
 
 
