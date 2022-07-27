@@ -1,0 +1,24 @@
+<form action="/edit/{{urlFromDb._id}}" method="post">
+
+<input type="hidden" name="_csrf" value="{{csrfToken}}" />
+
+  <label for="origin" class="form-label">Your URL</label>
+  <div class="input-group mb-3">
+
+    <span
+      class="input-group-text"
+      id="basic-addon3"
+    >https://example.com/users/</span>
+
+    <input
+      type="text"
+      class="form-control"
+      id="basic-url"
+      aria-describedby="basic-addon3"
+      name="origin"
+      value="{{urlFromDb.origin}}"
+    />
+  </div>
+
+  <button type="submit" class="btn btn-warning mb-1 ">Editar URL</button>
+</form>

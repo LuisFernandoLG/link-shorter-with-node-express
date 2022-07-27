@@ -1,0 +1,25 @@
+<h2 class="text-center">{{ user.userName }}</h2>
+<p  class="text-center">Edita aquí tu perfil</p>
+
+<div class="my5 text-center">
+
+{{#if image}}
+
+  <img class="rounded-circle" src="/assets/images/profiles/{{image}}" alt="default profile">
+
+{{else}}
+  <img class="rounded-circle" src="/assets/images/profiles/default.jpg" alt="default profile">
+
+{{/if}}
+
+</div>
+
+<form action="/profile?_csrf={{csrfToken}}" method="post" enctype="multipart/form-data">
+
+<div class="my-5">
+  <label for="formFileLg" class="form-label">Large file input example</label>
+  <input class="form-control form-control-lg" id="formFileLg" name="myFile" type="file">
+</div>
+
+<button type="submit" class=" btn btn-dark my-3" >Cambiar foto de perfil</button>
+</form>

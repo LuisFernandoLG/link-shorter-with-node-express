@@ -1,0 +1,11 @@
+<h1 class="text-center my-5">{{titulo}}</h1>
+
+
+<ul>
+{{#each urls }} 
+
+{{!-- <li>{{this.origin}} - {{this.shortURL}}</li> --}}
+{{> Url url=this}} 
+
+{{/each}}
+</ul>
